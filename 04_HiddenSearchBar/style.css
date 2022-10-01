@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(90deg, #ff5ff7, #7d44bf);
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.search {
+    position: relative;
+    height: 50px;
+}
+
+.search .input {
+    /* color: #0f0f0f; */
+    background-color: #f0f0f0;
+    border: none;
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
+    padding: 10px 15px;
+    transition: 0.5s ease-in;
+}
+
+.btn {
+    background-color: #f0f0f0;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 49.5px;
+    width: 50px;
+    transition: 0.5s ease-in;
+}
+
+.btn:focus,
+.input:focus {
+    outline: none;
+}
+
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .btn {
+    transform: translateX(200px);
+}
