@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+/* for all  */
+:root {
+    --left-bg-color: rgba(137, 43, 226, 0.434);
+    --right-bg-color: rgba(47, 45, 45, 0.518);
+    --hover-width: 75%;
+    --other-hover-width: 25%
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    z-index: 0;
+    filter: blur(0px);
+}
+
+
+/* for blurry loading  */
+.loading-text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 80px;
+    color: #fff;
+}
+
+
+/* for search bar  */
+.search {
+    position: absolute;
+    height: 50px;
+    top: 1%;
+    left: 1%;
+}
+
+.search .input {
+    color: #0f0f0f;
+    background-color: #f0f0f0;
+    border: none;
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
+    padding: 10px 15px;
+    transition: 0.5s ease-in;
+}
+
+.search-btn {
+    background-color: #f0f0f0;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    transition: 0.5s ease-in;
+}
+
+.search-btn:focus,
+.input:focus {
+    outline: none;
+}
+
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .search-btn {
+    transform: translateX(200px);
+}
+
+
+/* for split page  */
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 1300ms ease-in-out;
+}
+
+/* left part  */
+.split.left {
+    left: 0;
+    background: url("ps5.jpg") center center/cover;
+}
+
+.left .btn:hover {
+    background-color: rgba(87, 84, 236, 1);
+    border-color: rgba(87, 84, 236, 1);
+
+}
+
+.split.left::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: var(--left-bg-color);
+    position: absolute;
+}
+
+/* right part */
+.split.right {
+    right: 0;
+    background: url("xbox.jpg") center center/cover;
+}
+
+.right .btn:hover {
+    background-color: rgba(28, 122, 28, 1);
+    border-color: rgba(28, 122, 28, 1);
+}
+
+.split.right::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: var(--right-bg-color);
+    position: absolute;
+}
+
+h1 {
+    z-index: 100;
+    color: white;
+    font-weight: 500;
+    font-size: 3.5rem;
+    white-space: nowrap;
+}
+
+.btn {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    background-color: transparent;
+    border: 2.5px solid wheat;
+    text-decoration: none;
+    z-index: 100;
+    color: white;
+    font-weight: bold;
+    transition: 0.4s ease;
+}
+
+
+/* for hover effect */
+/* left hover */
+.hover-left .left {
+    width: var(--hover-width);
+}
+
+.hover-left .right {
+    width: var(--other-hover-width);
+}
+
+/* right hover  */
+.hover-right .right {
+    width: var(--hover-width);
+}
+
+.hover-right .left {
+    width: var(--other-hover-width);
+}
+
+/* for smaller screens */
+
+@media (max-width:800px) {
+    h1 {
+        font-size: 2.5rem;
+        transition: 0.5s ease;
+    }
+
+    .btn {
+        font-size: 15px;
+        height: 40px;
+        width: 100px;
+        transition: 0.5s ease;
+    }
+}

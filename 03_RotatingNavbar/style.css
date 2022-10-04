@@ -8,12 +8,12 @@ body {
     font-family: 'roboto', sans-serif;
     overflow-x: hidden;
     margin: 0;
-    color: #222;
-    background-color: #333;
+    color: rgb(234, 209, 239);
+    background-color: rgb(31, 30, 30);
 }
 
 .container {
-    background-color: #f0f0f0;
+    background-color: rgb(9, 8, 8);
     transform-origin: top left;
     transition: transform 0.5s linear;
     min-height: 100vh;
@@ -41,7 +41,7 @@ body {
 }
 
 .circle {
-    background-color: #7979ff;
+    background-color: rgb(85, 85, 210);
     border-radius: 50%;
     height: 200px;
     width: 200px;
@@ -81,7 +81,7 @@ img {
 
 nav {
     position: fixed;
-    bottom: 40px;
+    bottom: 100px;
     left: 0;
     color: orange;
     font-size: 15px;
@@ -103,7 +103,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-    color: rgb(142, 132, 132);
+    color: rgb(96, 86, 86);
 }
 
 nav ul li+li {

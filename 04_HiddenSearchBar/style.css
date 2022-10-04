@@ -39,7 +39,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    height: 49.5px;
+    height: 50px;
     width: 50px;
     transition: 0.5s ease-in;
 }
