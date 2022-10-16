@@ -87,7 +87,7 @@ body {
 
 
 /* for split page  */
-.split {
+.split { 
     position: absolute;
     width: 50%;
     height: 100%;
