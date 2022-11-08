@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, #373b44, #4286f4);
+}
+
+.container {
+    background-color: white;
+    height: 245px;
+    width: 130px;
+    border: 3.5px solid blue;
+    border-radius: 0 0 35px 35px;
+    position: relative;
+}
+
+.remaining {
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.3s all ease-in-out;
+}
+
+#fill {
+    font-size: 24px;
+    bottom: 0.1px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: #4286f4;
+    border-radius: 0 0 30px 30px;
+    transition: 0.3s all ease-in-out;
+}
+
+.glass {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    height: 100px;
+    width: 50px;
+    border: 2px solid blue;
+    border-radius: 0 0 15px 15px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.glasses {
+    margin-bottom: 20px;
+}
+
+.full {
+    background-color: #4286f4;
+    color: white;
+}
