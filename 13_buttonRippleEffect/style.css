@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+    background-color: rgb(64, 43, 226);
+    border: 1px solid blueviolet;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+button:focus {
+    outline: none;
+}
+
+button .circle {
+    background-color: aliceblue;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    animation: scale 0.6s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+    }
+}
