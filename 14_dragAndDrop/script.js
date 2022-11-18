@@ -5,26 +5,40 @@ fill.addEventListener("dragstart", dragStart);
 fill.addEventListener("dragend", dragEnd);
 for (const empty of empties) {
   empty.addEventListener("dragover", dragOver);
+  empty.addEventListener("dragenter", dragEnter);
+  empty.addEventListener("dragleave", dragLeave);
+  empty.addEventListener("drop", dragDrop);
 }
 
+// runs when dragging starts
 function dragStart() {
-  console.log("drag start");
-  fill.classList.add("hold");
-}
-function dragEnd() {
-  console.log("drag End");
-  fill.classList.remove("hold");
+  //   fill.classList.add("hold");
+  this.className += " hold";
+  setTimeout(() => (this.className = "invisible"), 0);
 }
 
-function dragOver() {
-  console.log("drag Over");
+// runs when dragging stops
+function dragEnd() {
+  this.className = "fill";
 }
+
+// runs when draged over somethings
+function dragOver(e) {
+  e.preventDefault();
+}
+
+// runs when dragged image enter another box
 function dragEnter() {
-  console.log("drag Enter");
+  this.className += " hovered";
 }
+
+// runs when dragged image leave other box
 function dragLeave() {
-  console.log("drag Leave");
+  this.className = "empty";
 }
+
+// runs when dragged image is dropped
 function dragDrop() {
-  console.log("drag Drop");
+  this.className = "empty";
+  this.append(fill);
 }

@@ -23,7 +23,7 @@ body {
     }
 }
 
-.box {
+.empty {
     cursor: pointer;
     background-color: wheat;
     width: 200px;
