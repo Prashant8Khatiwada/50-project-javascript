@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+canvas {
+    border: 7.5px solid rgb(53, 190, 221);
+    position: absolute;
+}
+
+.tool-box {
+    position: relative;
+    top: 50%;
+    transform: translateY(-100%);
+    width: 814px;
+    height: 100px;
+    background-color: rgb(53, 190, 221);
+    display: flex;
+    align-items: center;
+}
+
+.tool-box>* {
+    height: 55px;
+    width: 55px;
+    background-color: white;
+    font-size: 34px;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+.tool-box>*:last-child {
+    position: relative;
+    left: 50%;
+
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    background-color: blueviolet;
+    transition: 0.3s all ease;
+}
+
+#color {
+    cursor: pointer;
+}
+
+#size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
