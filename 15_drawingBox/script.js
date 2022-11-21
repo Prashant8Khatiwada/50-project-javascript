@@ -2,21 +2,19 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 // to increase or decrease size
 const color = document.getElementById("color");
-// const clear = document.getElementById("clear");
+const clear = document.getElementById("clear");
 const increase = document.getElementById("increase");
 const decrease = document.getElementById("decrease");
 const span = document.getElementById("size");
 let size = 10;
 let defaultColor = color.value;
-console.log(defaultColor);
 let x;
 let y;
 let isPressed = false;
 
-color.addEventListener("change", () => {
-  let defaultColor = color.value;
-});
-// color.value = defaultColor;
+// color.addEventListener("change", () => {
+//   let defaultColor = color.value;
+// });
 // to increase size
 increase.addEventListener("click", () => {
   if (size < 40) {
